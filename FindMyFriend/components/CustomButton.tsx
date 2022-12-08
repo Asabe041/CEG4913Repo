@@ -10,13 +10,14 @@ import {
 import { colors } from './colors';
 
 interface Props {
+  name: string;
   onPress: ((event: GestureResponderEvent) => void) | undefined;
 }
 
-const CustomButton: FunctionComponent<Props> = ({ onPress }) => {
+const CustomButton: FunctionComponent<Props> = ({ name, onPress }) => {
   return (
     <View style={styles.container}>
-      <Button title='Search' color={colors.graydark} onPress={onPress} />
+      <Button title={name} color={colors.graydark} onPress={onPress} />
     </View>
   );
 };

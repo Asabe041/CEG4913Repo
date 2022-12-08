@@ -1,6 +1,7 @@
 package capstone.routerservice.controller;
 
 import capstone.routerservice.service.ArduinoService;
+import org.json.JSONException;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -16,13 +17,17 @@ public class ArduinoController {
     }
 
     @PostMapping("mpu")
-    public String mpuController(@RequestBody String body){
+    public String mpuController(@RequestBody String body) throws JSONException {
         return arduinoService.mpuService(body);
     }
 
     @PostMapping("mcp")
-    public String mcpController(@RequestBody String body){
+    public String mcpController(@RequestBody String body) throws JSONException {
         return arduinoService.mcpService(body);
     }
 
+    @GetMapping("ledstate")
+    public int ledStateController(){
+        return arduinoService.stateService();
+    }
 }

@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "8f3f5927-a464-4283-861b-4d62303c4394",
+		"name": "Capston_Project_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23738260"
+	},
+	"item": [
+		{
+			"name": "Post MCP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"led_state\":3,\n\"raw_adc_data\": 1213.12}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/mcp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"mcp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST MPU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"x_axis\":1.2,\n\"y_axis\": 2.12,\n\"z_axis\": 3.2,\n\"yaw\": 4.2,\n\"roll\": 2.2,\n\"pitch\": 4.2,\n\"temperature\": 20.4}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/mpu",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"mpu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/ledstate",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ledstate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

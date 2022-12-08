@@ -13,7 +13,7 @@ const Alert: FunctionComponent<Props> = ({ color }) => {
       style={{
         marginTop: 20,
         width: '50%',
-        height: '10%',
+        height: '6%',
         backgroundColor: color,
         borderWidth: 1,
         borderRadius: 5
